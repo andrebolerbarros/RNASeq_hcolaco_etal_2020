@@ -52,11 +52,11 @@ STAR --runThreadN 10 --runMode genomeGenerate --genomeDir $gen_index --genomeFas
 ```
 Options explained:
 
-`--runThreadN 10` Nr. of Cores used
-`--runMode genomeGenerate` Argument for the program to know what is going to run
-`--genomeDir $gen_index/` Path to the genome indexes
-`--genomeFastaFiles $gen_index/Mus_musculus.GRCm38.dna.primary_assembly.fa` Path to the fasta file of the reference genome
-`--sjdbGTFfile $gen_index/Mus_musculus.GRCm38.95.gtf` Path to the gtf file of the reference genome
+- `--runThreadN 10` Nr. of Cores used
+- `--runMode genomeGenerate` Argument for the program to know what is going to run
+- `--genomeDir $gen_index/` Path to the genome indexes
+- `--genomeFastaFiles $gen_index/Mus_musculus.GRCm38.dna.primary_assembly.fa` Path to the fasta file of the reference genome
+- `--sjdbGTFfile $gen_index/Mus_musculus.GRCm38.95.gtf` Path to the gtf file of the reference genome
 
 Afterwards, you can proceed to the alignment step. For this, we will perform a cycle but, before, we need to create the several required folders to store the necessary files:
 
