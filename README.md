@@ -59,20 +59,16 @@ Options explained:
 - `--sjdbGTFfile $gen_index/Mus_musculus.GRCm38.95.gtf` Path to the gtf file of the reference genome
 
 Afterwards, you can proceed to the alignment step. For this, we will perform a cycle but, before, we need to create the several required folders to store the necessary files:
-
 ```
 mkdir aligned
 mkdir qualimap_aligned
 
 ```
-
 Now, we go to the directory where the merged files are and proceed with the cycle:
-
 ```
 cd raw/
 export gen_index=../../gen_index #this step helps in case of using a different window
 ```
-
 ```
 for f in *.txt.gz;
 do STAR --genomeDir $gen_index --readFilesIn $f --readFilesCommand zcat --sjdbGTFfile $gen_index/Mus_musculus.GRCm38.97.gtf --quantMode GeneCounts --runThreadN 24 --outFileNamePrefix ../aligned/"$f"_ --outSAMtype BAM SortedByCoordinate --outReadsUnmapped Fastx;
