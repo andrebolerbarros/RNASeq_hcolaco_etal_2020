@@ -15,4 +15,4 @@ This quality control is done using the program **Fastqc** (https://www.bioinfor
 ``mkdir fastqc_reports
 mkdir mQC_reports
 
-fastqc raw/*.txt.gz -o fastqc_reports -t 5``
+fastqc raw/*.txt.gz -o fastqc_reports -t 5
