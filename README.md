@@ -1,1 +1,2 @@
-# RNA-Seq Analysis for Colaço et al 2019 Paper 'INSERT TITLE HERE'
+# 'INSERT PAPER TITLE HERE' - Colaço et al., 2019
+## RNA-Seq Analysis
