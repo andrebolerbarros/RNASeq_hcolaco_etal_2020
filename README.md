@@ -1,4 +1,4 @@
-# 'INSERT PAPER TITLE HERE' - Colaço *et al.*, 2019
+# 'Host-dependent induction of disease tolerance to infection by tetracycline antibiotics' - Colaço *et al.*, 2019
 ## RNA-Seq Analysis
 
 ### Lung Dataset
