@@ -6,7 +6,9 @@ This analysis is part of this published pre-print: https://www.biorxiv.org/conte
 This folder contains three datasets:
 
 **Lung Dataset:** Dataset comparing Gene Expression in the lung from mice injected with PBS and Doxycycline, non-infected and infected, at 8h;
+
 **Liver @8h Dataset:** Dataset comparing Gene Expression in the liver from mice injected with PBS and Doxycycline, non-infected and infected, at 8h;
+
 **Liver @30h Dataset:** Dataset comparing Gene Expression in the liver from mice injected with PBS, Doxycycline, Phenphormin and Epirubicin,  non-infected and infected, at 30h;
 
 All datasets were processed the following way:
