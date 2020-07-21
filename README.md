@@ -1,13 +1,15 @@
 # 'Host-dependent induction of disease tolerance to infection by tetracycline antibiotics' - Colaço *et al.*, 2019
 ## RNA-Seq Analysis
 
-### Lung Dataset
-- Samples from *Mus musculus*, strain C57BL/6J;
-- 4 Groups:
-    - 5 Non-Infected + Injected with PBS
-    - 5 Non-Infected + Injected with 1.75 ug/g Doxy
-    - 5 Infected with *E.coli* + Injected with PBS
-    - 5 Infected with *E.coli* + Injected with 1.75 ug/g Doxy
+This analysis is part of this published pre-print: https://www.biorxiv.org/content/10.1101/833269v1
+
+This folder contains three datasets:
+
+**Lung Dataset:** Dataset comparing Gene Expression in the lung from mice injected with PBS and Doxycycline, non-infected and infected, at 8h;
+**Liver @8h Dataset:** Dataset comparing Gene Expression in the liver from mice injected with PBS and Doxycycline, non-infected and infected, at 8h;
+**Liver @30h Dataset:** Dataset comparing Gene Expression in the liver from mice injected with PBS, Doxycycline, Phenphormin and Epirubicin,  non-infected and infected, at 30h;
+
+All datasets were processed the following way:
 
 #### Quality Control
 This quality control is done using the program **Fastqc** (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/); considering this program produces a report per file, we can also use a program to merge all the reports into one - **MultiQC** (https://multiqc.info/).
@@ -35,7 +37,7 @@ Then, you can assess it by just using:
 cd $gen_index
 ```
 
-To align our samples, we need the reference genome indexes, that are just the corresponding reference genome (.fasta) and its corresponding annotation (.gtf). To get both of these files, we go to the Ensembl website (https://www.ensembl.org/info/data/ftp/index.html) and get the corresponding files:
+To align our samples, we need the reference genome indexes, that are just the corresponding reference genome (.fasta) and its corresponding annotation (.gtf). We used different versions for the datasets: While for the first two datasets, we used version 97, the version 99 was used for the last dataset.
 
 ```
 wget ftp://ftp.ensembl.org/pub/release-97/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna.primary_assembly.fa.gz
@@ -44,7 +46,7 @@ gunzip Mus_musculus.GRCm38.dna.primary_assembly.fa.gz
 wget ftp://ftp.ensembl.org/pub/release-97/gtf/mus_musculus/Mus_musculus.GRCm38.97.gtf.gz
 gunzip Mus_musculus.GRCm38.97.gtf.gz
 ```
-We are going to use the most recent version of the annotation (**97 release**). Now that we have the files, we proceed to use STAR with the option of  `genomeGenerate`
+ Now that we have the files, we proceed to use STAR with the option of  `genomeGenerate`
 
 ```
 STAR --runThreadN 10 --runMode genomeGenerate --genomeDir $gen_index --genomeFastaFiles $gen_index/Mus_musculus.GRCm38.dna.primary_assembly.fa --sjdbGTFfile $gen_index/Mus_musculus.GRCm38.97.gtf 
