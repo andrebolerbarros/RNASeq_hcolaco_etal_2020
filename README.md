@@ -63,7 +63,9 @@ Options explained:
 - `--genomeFastaFiles $gen_index/Mus_musculus.GRCm38.dna.primary_assembly.fa` Path to the fasta file of the reference genome
 - `--sjdbGTFfile $gen_index/Mus_musculus.GRCm38.95.gtf` Path to the gtf file of the reference genome
 
-Afterwards, you can proceed to the alignment step. For this, we will perform a cycle but, before, we need to create the several required folders to store the necessary files:
+Afterwards, you can proceed to the alignment step. We are going to use the program qualimap (http://qualimap.bioinfo.cipf.es/) & the log files of STAR to assess the quality of this step.
+
+The alignment step will perform a cycle but, before, we need to create the several required folders to store the necessary files:
 ```
 mkdir aligned
 mkdir qualimap_aligned
@@ -81,4 +83,4 @@ qualimap rnaseq -bam ../aligned/"$f"_*.bam -gtf $gen_index/Mus_musculus.GRCm38.9
 rm -rf ../aligned/$f*.bam; done
 ```
 
-This cycle will perform the alignment and perform the corresponding report for the file of the alignment.
+This cycle will perform the alignment and perform the corresponding report for the BAM file.
