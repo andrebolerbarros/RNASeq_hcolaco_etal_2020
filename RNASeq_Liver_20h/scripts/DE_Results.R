@@ -5,7 +5,7 @@ library("org.Mm.eg.db")
 library("xlsx")
 
 #Determine the working directory
-setwd("C:/Users/asbarros/Google Drive/Colaco_etal_2019/RNASeq_Liver_20h/")
+setwd("~/Colaco_etal_2019/RNASeq_Liver_20h/")
 
 options(java.parameters = "- Xmx50000m")
 
