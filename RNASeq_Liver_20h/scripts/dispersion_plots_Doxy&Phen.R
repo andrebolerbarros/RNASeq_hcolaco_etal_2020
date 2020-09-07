@@ -3,7 +3,7 @@ library("xlsx")
 library("data.table")
 library("ggrepel")
 
-setwd("C:/Users/asbarros/Desktop/Bioinfo/RNASeq_march2020/R_Analysis/")
+setwd("~/Colaco_etal_2019/RNASeq_Liver_20h/")
 options(java.parameters = "- Xmx2048m")
 source("scripts/DESeq_Model.R",echo=T)
 source("scripts/theme_geometry_function_ZoomIn.R")
