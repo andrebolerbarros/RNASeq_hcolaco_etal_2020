@@ -3,7 +3,7 @@
 
 This analysis is part of this published pre-print: https://www.biorxiv.org/content/10.1101/833269v1
 
-This folder contains the files corresponding to the **Lung Dataset:** Dataset comparing Gene Expression in the lung from mice injected with PBS and Doxycycline, non-infected and infected, at 8h;
+This folder contains the files corresponding to the **Liver @8h Dataset:** Dataset comparing Gene Expression in the liver from mice injected with PBS and Doxycycline, non-infected and infected, at 8h;
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 The folders contains the following subfolders:
