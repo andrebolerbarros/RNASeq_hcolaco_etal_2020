@@ -10,7 +10,7 @@ library("xlsx")
 library("stringr")
 library("vsn")
 
-setwd("C:/Users/asbarros/Google Drive/Colaco_etal_2019/RNASeq_Liver_20h/")
+setwd("~/Colaco_etal_2019/RNASeq_Liver_20h/")
 options(java.parameters = "- Xmx50000m")
 source("scripts/DESeq_Model.R",echo=T)
 ######################################################################################
