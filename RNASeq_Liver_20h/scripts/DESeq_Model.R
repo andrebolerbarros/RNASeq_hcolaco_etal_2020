@@ -19,7 +19,7 @@ theme_set(theme_bw())
 ##### Data Importation ############################################
 
 #Determine the working directory
-setwd("C:/Users/asbarros/Google Drive/Colaco_etal_2019/RNASeq_Liver_20h/")
+setwd("~/Colaco_etal_2019/RNASeq_Liver_20h/")
 
 #Create the required folders for the analysis
 dir.create(path = "GeneralPlots/", showWarnings = FALSE)
