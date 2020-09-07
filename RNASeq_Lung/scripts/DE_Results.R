@@ -3,7 +3,7 @@ library("org.Mm.eg.db")
 library("xlsx")
 
 #Determine the working directory
-setwd("C:/Users/asbarros/Google Drive/Colaco_etal_2019/RNASeq_Lung/")
+setwd("~/Colaco_etal_2019/RNASeq_Lung/")
 
 ##### Re-running DESeq Model #### 
 source("scripts/DESeq_Model.R",echo = T)
