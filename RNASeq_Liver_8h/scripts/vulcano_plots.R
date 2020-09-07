@@ -1,5 +1,5 @@
 #Determine the working directory
-setwd("C:/Users/asbarros/Google Drive/Colaco_etal_2019/RNASeq_Liver_8h/")
+setwd("~/Colaco_etal_2019/RNASeq_Liver_8h/")
 
 options(java.parameters = "- Xmx2048m")
 
