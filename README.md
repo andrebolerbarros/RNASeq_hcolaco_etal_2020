@@ -1,4 +1,4 @@
-# 'Host-dependent induction of disease tolerance to infection by tetracycline antibiotics' - Colaço *et al.*, 2019
+# 'Tetracycline Antibiotics Induce Host-Dependent Disease Tolerance to Infection' - Colaço *et al.*, 2020
 ## RNA-Seq Analysis
 
 This analysis is part of this published pre-print: https://www.biorxiv.org/content/10.1101/833269v1
