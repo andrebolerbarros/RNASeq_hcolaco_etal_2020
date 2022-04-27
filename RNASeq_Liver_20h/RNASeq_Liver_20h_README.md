@@ -7,7 +7,7 @@ This folder contains the files corresponding to the Liver @20h Dataset: Dataset 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 The folders contains the following subfolders:
-- *gene_counts:* the gene counts files produced by the alignment step using STAR, one for each sample;
+- *all_counts.tab:* a file with reads per gene, with sample per column;
 - *metadata:* the file with the information for the samples;
 - *scripts:* the several scripts used for the analysis;
 - *SessionInfo:* one file with the information regarding the information of the R session (R version, packages versions, etc.).
