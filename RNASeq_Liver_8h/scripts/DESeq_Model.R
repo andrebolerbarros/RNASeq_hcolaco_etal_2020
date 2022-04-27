@@ -29,7 +29,7 @@ dir.create(path = "SessionInfo/", showWarnings = FALSE)
 writeLines(capture.output(sessionInfo()),paste0("SessionInfo/SessionInfo_",Sys.Date(),".txt",sep=""))
 
 #Import the all_counts file
-tab<-read.csv("gene_counts/all_counts.tab",row.names = 1)
+tab<-read.csv("all_counts.tab",row.names = 1)
 
 #Import the metadata file & add a new variable that combines treatment & infection
 design<-read.xlsx("metadata_liver19.xlsx",sheetIndex = 1,header=T,row.names = 1)
