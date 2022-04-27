@@ -29,7 +29,7 @@ dir.create(path = "SessionInfo/", showWarnings = FALSE)
 writeLines(capture.output(sessionInfo()),paste0("SessionInfo/SessionInfo_",Sys.Date(),".txt",sep=""))
 
 #Import the all_counts file
-tab<-read.csv("gene_counts/all_counts.tab",row.names = 1)
+tab<-read.csv("all_counts.tab",row.names = 1)
 
 #Re-name the columns to get only the sample names and remove the path of each file & extension
 colnames(tab)<-gsub(".*/","",names(outfile))
