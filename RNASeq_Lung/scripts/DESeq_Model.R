@@ -23,7 +23,7 @@ dir.create(path = "GeneralPlots/", showWarnings = FALSE)
 dir.create(path = "SessionInfo/", showWarnings = FALSE)
 
 #Import the all_counts file
-tab<-read.csv("gene_counts/all_counts.tab",row.names = 1)
+tab<-read.csv("all_counts.tab",row.names = 1)
 
 #Import the metadata file & add a new variable that combines treatment & infection
 design<-read.csv2("sampleTable.csv",header=T,row.names = 1,sep=";")
