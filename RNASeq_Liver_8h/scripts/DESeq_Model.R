@@ -28,33 +28,8 @@ dir.create(path = "SessionInfo/", showWarnings = FALSE)
 #Save a file with the information of the sessionInfo
 writeLines(capture.output(sessionInfo()),paste0("SessionInfo/SessionInfo_",Sys.Date(),".txt",sep=""))
 
-#The ReadsPerGene files are saved in a folder called gene_counts. We need to save a list of files to import
-gc_tab<-"gene_counts/"
-files<-paste(gc_tab,dir(gc_tab,pattern="tab"),sep="")
-
-#Importing each file as data-frame and save them in a list
-outfile<-list()
-for (i in files) {
-  outfile[[i]]<-read.table(i,row.names=1)
-}
-
-#Remove the first four lines of the files, that contain unmappeds, dubious, and other artifacts
-for (i in 1:length(outfile)) {
-  outfile[[i]]<-outfile[[i]][-c(1:4),]
-}
-
-#Now, we have a data-frame for each sample. The column to be considered for each sample is based on the strandness of the sequencing protocol
-tab<-data.frame(outfile[[1]][,1])
-rownames(tab)<-rownames(outfile[[1]])
-
-for (i in 2:length(outfile)) {
-  tab[,i]<-outfile[[i]][,3]
-  rownames(tab)<-rownames(outfile[[1]])
-}
-
-#Re-name the columns to get only the sample names and remove the path of each file & extension
-colnames(tab)<-gsub(".*/","",names(outfile))
-colnames(tab)<-gsub("^.*(Li[0-99]+).*","\\1",colnames(tab))
+#Import the all_counts file
+tab<-read.csv("gene_counts/all_counts.tab",row.names = 1)
 
 #Import the metadata file & add a new variable that combines treatment & infection
 design<-read.xlsx("metadata_liver19.xlsx",sheetIndex = 1,header=T,row.names = 1)
