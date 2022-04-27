@@ -31,10 +31,6 @@ writeLines(capture.output(sessionInfo()),paste0("SessionInfo/SessionInfo_",Sys.D
 #Import the all_counts file
 tab<-read.csv("all_counts.tab",row.names = 1)
 
-#Re-name the columns to get only the sample names and remove the path of each file & extension
-colnames(tab)<-gsub(".*/","",names(outfile))
-colnames(tab)<-gsub("^.*(Li[A-Z][0-9]+).*","\\1",colnames(tab))
-
 #Import the metadata file & add a new variable that combines treatment & infection
 design<-read.xlsx("metadata_liver20.xlsx",sheetIndex = 1,header=T,row.names = 1)
 
