@@ -61,7 +61,7 @@ Options explained:
 - `--runMode genomeGenerate` Argument for the program to know what is going to run
 - `--genomeDir $gen_index/` Path to the genome indexes
 - `--genomeFastaFiles $gen_index/Mus_musculus.GRCm38.dna.primary_assembly.fa` Path to the fasta file of the reference genome
-- `--sjdbGTFfile $gen_index/Mus_musculus.GRCm38.95.gtf` Path to the gtf file of the reference genome
+- `--sjdbGTFfile $gen_index/Mus_musculus.GRCm38.97.gtf` Path to the gtf file of the reference genome
 
 Afterwards, you can proceed to the alignment step. We are going to use the program qualimap (http://qualimap.bioinfo.cipf.es/) & the log files of STAR to assess the quality of this step.
 
